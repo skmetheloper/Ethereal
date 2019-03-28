@@ -1,5 +1,5 @@
 title: KHOTEMAL
 source: docs/
-destination: public/
+destination: dist/
 plugins: 
   - jekyll-feed
