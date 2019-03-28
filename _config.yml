@@ -1,0 +1,5 @@
+title: KHOTEMAL
+source: src/
+destination: public/
+plugins: 
+  - jekyll-feed
