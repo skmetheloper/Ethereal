@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "name": "Template",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "..."
+    },
+    "homepage": {
+      "type": "string",
+      "description": "...",
+      "format": "uri"
+    },
+    "license": {
+      "type": ["string", "array"],
+      "description": "..."
+    },
+    "version": {
+      "type": "string",
+      "description": "...",
+      "pattern": "^v?\\d+(((\\.\\d+)?\\.\\d+)?\\.\\d+)?|^dev-"
+    },
+    "authors": {
+      "$ref": "#/definitions/authors"
+    },
+    "source": {
+      "type": "object",
+      "required": ["type", "url", "reference"],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "mirrors": {
+          "type": "array"
+        }
+      }
+    }
+  }
+}
